@@ -4,6 +4,92 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/rosaPalido"
     tools:context="net.eviera.canilleras.MenuActivity">
 
+    <ImageView
+        android:id="@+id/logoTop"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="@color/rosaFuerte"
+        android:contentDescription="@string/logotop"
+        android:paddingBottom="10dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:scaleType="fitStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_blanco" />
+
+    <Button
+        android:id="@+id/btnNuevaCanillera"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@color/celeste"
+        android:fontFamily="@font/allerta"
+        android:text="@string/nueva_canillera"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/btnModificarDiseno"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoTop"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <Button
+        android:id="@+id/btnModificarDiseno"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/celeste"
+        android:fontFamily="@font/allerta"
+        android:text="@string/modificar_dise_o"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/btnPrepararImpresion"
+        app:layout_constraintEnd_toEndOf="@+id/btnNuevaCanillera"
+        app:layout_constraintStart_toStartOf="@+id/btnNuevaCanillera"
+        app:layout_constraintTop_toBottomOf="@+id/btnNuevaCanillera" />
+
+    <Button
+        android:id="@+id/btnPrepararImpresion"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/celeste"
+        android:fontFamily="@font/allerta"
+        android:text="@string/preparar_impresi_n"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/btnTutorial"
+        app:layout_constraintEnd_toEndOf="@+id/btnModificarDiseno"
+        app:layout_constraintStart_toStartOf="@+id/btnModificarDiseno"
+        app:layout_constraintTop_toBottomOf="@+id/btnModificarDiseno" />
+
+    <Button
+        android:id="@+id/btnTutorial"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/celeste"
+        android:fontFamily="@font/allerta"
+        android:text="@string/tutorial"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnPrepararImpresion"
+        app:layout_constraintStart_toStartOf="@+id/btnPrepararImpresion"
+        app:layout_constraintTop_toBottomOf="@+id/btnPrepararImpresion" />
 </android.support.constraint.ConstraintLayout>
