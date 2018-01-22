@@ -20,5 +20,7 @@
 ### Animaciones
 - slide to left-right: https://kylewbanks.com/blog/left-and-right-slide-animations-on-android-activity-or-view
 - compleja: http://myhexaville.com/2016/12/30/android-activity-transitions/
-  
-  
+- ripple effect:  https://stackoverflow.com/questions/40008609/add-ripple-effect-to-my-button-with-button-background-color  
+  - pre lollipop: https://stackoverflow.com/questions/30760822/how-to-create-ripple-effect-for-pre-lollipop
+    
+    

@@ -8,4 +8,13 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="botones" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:background">@color/fondoBotones</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:fontFamily">@font/allerta</item>
+    </style>
+
 </resources>

@@ -27,16 +27,13 @@
 
     <Button
         android:id="@+id/btnIniciar"
-        style="@style/Widget.AppCompat.Button.Borderless"
+        style="@style/botones"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginBottom="50dp"
-        android:background="@color/fondoBotones"
         android:drawableStart="@drawable/triangle"
-        android:fontFamily="@font/allerta"
         android:text="@string/iniciar"
         android:textAlignment="center"
-        android:textColor="@android:color/white"
         android:textSize="18sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
