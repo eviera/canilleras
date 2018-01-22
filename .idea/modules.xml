@@ -3,9 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://C:\Users\eviera\workspace-android-intellij\canilleras\app\app.iml" filepath="C:\Users\eviera\workspace-android-intellij\canilleras\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/canilleras.iml" filepath="$PROJECT_DIR$/canilleras.iml" />
-      <module fileurl="file://C:\Users\eviera\workspace-android-intellij\canilleras\canilleras.iml" filepath="C:\Users\eviera\workspace-android-intellij\canilleras\canilleras.iml" />
     </modules>
   </component>
 </project>

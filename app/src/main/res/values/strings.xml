@@ -1,9 +1,8 @@
 <resources>
     <string name="app_name">canilleras</string>
     <string name="iniciar">iniciar</string>
-    <string name="logo">logo</string>
+    <string name="logo">Logo Area Nueve Personalizate</string>
     <string name="triangulo">triangulo</string>
-    <string name="logotop">logoTop</string>
     <string name="nueva_canillera">Nueva Canillera</string>
     <string name="tutorial">Tutorial</string>
     <string name="preparar_impresi_n">Preparar Impresión</string>

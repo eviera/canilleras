@@ -1,0 +1,22 @@
+Pantallas:
+1. Pantalla:Intro
+2. Pantalla: Seleccion de Modelo por QR, o con combo si no anda el QR
+3. Pantalla: Menu -> Nueva, Cargar diseño
+3.1. Opcion Nueva
+3.1.1. Pantalla: Las cuatro canilleras, con botones Cargar, Guardar, Imprimir
+3.1.1.1. Al tocar en una canillera va a la edicion de esa canillera
+3.1.1.2. Pantalla: Edicion canillera, con botones Guardar, Cancelar
+3.2. Opcion Cargar Diseño
+3.2.1. List de pantallas
+3.2.2. Muestra la pantalla de las cuatro canilleras de 3.1.1
+4. Pantalla: imprimir
+4.1. Pide tu nombre y mail y un checkbox para mandar publicidad (estos datos se deben guardar en una base)
+4.2. El boton 'enviar', crea el pdf y lo envia por mail al especificado
+
+
+- El modelo de canillera (Kids, Stan), cambia la forma de la canillera ? Porque sino, se puede evitar hasta la impresion
+Si, cambia
+-- Si el modelo cambia la forma, hay que guardarlos por separado
+Si
+- Quitar el tutorial ? Deberia ser autoexplicativo
+

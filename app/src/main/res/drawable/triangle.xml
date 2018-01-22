@@ -7,7 +7,7 @@
             android:pivotX="135%"
             android:pivotY="15%">
             <shape android:shape="rectangle">
-                <solid android:color="@color/rosaFuerte" />
+                <solid android:color="@color/colorPrimaryDark" />
             </shape>
         </rotate>
     </item>

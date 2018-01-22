@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#F45368</color>
+    <color name="colorPrimary">#f3dddc</color>
     <color name="colorPrimaryDark">#F45368</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#CB2541</color>
 
-    <color name="rosaFuerte">#f45368</color>
-    <color name="rosaPalido">#f3dddc</color>
-    <color name="celeste">#28ADCE</color>
-    <color name="rojo">#CB2541</color>
+    <color name="fondoBotones">#28ADCE</color>
 </resources>
 
 
