@@ -23,11 +23,17 @@
 
     <Button
         android:id="@+id/btnIniciar"
-        style="@style/botones"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginBottom="32dp"
+        android:background="@color/fondoBotones"
+        android:clickable="true"
         android:drawableStart="@drawable/triangle"
+        android:focusable="true"
+        android:fontFamily="@font/allerta"
+        android:foreground="?attr/selectableItemBackground"
+        android:textColor="@android:color/white"
         android:text="@string/iniciar"
         android:textAlignment="center"
         android:textSize="18sp"

@@ -28,8 +28,8 @@
         android:layout_height="80dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        style="@style/botones"
         android:text="@string/nueva_canillera"
+        android:theme="@style/boton"
         android:textAlignment="center"
         android:textSize="18sp"
         android:textStyle="italic"
@@ -45,8 +45,7 @@
         android:layout_height="80dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        style="@style/botones"
-        android:fontFamily="@font/allerta"
+        android:theme="@style/boton"
         android:text="@string/modificar_dise_o"
         android:textAlignment="center"
         android:textSize="18sp"
@@ -62,7 +61,7 @@
         android:layout_height="80dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        style="@style/botones"
+        android:theme="@style/boton"
         android:text="@string/preparar_impresi_n"
         android:textAlignment="center"
         android:textSize="18sp"
@@ -79,7 +78,7 @@
         android:layout_height="80dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        style="@style/botones"
+        android:theme="@style/boton"
         android:text="@string/tutorial"
         android:textAlignment="center"
         android:textSize="18sp"
@@ -95,5 +94,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5" />
+
 
 </android.support.constraint.ConstraintLayout>
