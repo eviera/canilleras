@@ -23,7 +23,7 @@
         app:srcCompat="@drawable/logo_blanco" />
 
     <Button
-        android:id="@+id/btnNuevaCanillera"
+        android:id="@+id/btnNueva"
         android:layout_width="250dp"
         android:layout_height="80dp"
         android:layout_marginEnd="8dp"
@@ -33,7 +33,7 @@
         android:textAlignment="center"
         android:textSize="18sp"
         android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/btnModificarDiseno"
+        app:layout_constraintBottom_toTopOf="@+id/btnCargar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,47 +41,18 @@
         app:layout_constraintVertical_chainStyle="packed" />
 
     <Button
-        android:id="@+id/btnModificarDiseno"
+        android:id="@+id/btnCargar"
         android:layout_width="250dp"
         android:layout_height="80dp"
         android:layout_marginTop="2dp"
-        android:theme="@style/boton"
-        android:text="@string/modificar_dise_o"
+        android:text="@string/cargar_dise_o"
         android:textAlignment="center"
         android:textSize="18sp"
         android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/btnPrepararImpresion"
-        app:layout_constraintEnd_toEndOf="@+id/btnNuevaCanillera"
-        app:layout_constraintStart_toStartOf="@+id/btnNuevaCanillera"
-        app:layout_constraintTop_toBottomOf="@+id/btnNuevaCanillera" />
-
-    <Button
-        android:id="@+id/btnPrepararImpresion"
-        android:layout_width="250dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="2dp"
         android:theme="@style/boton"
-        android:text="@string/preparar_impresi_n"
-        android:textAlignment="center"
-        android:textSize="18sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/btnTutorial"
-        app:layout_constraintEnd_toEndOf="@+id/btnModificarDiseno"
-        app:layout_constraintStart_toStartOf="@+id/btnModificarDiseno"
-        app:layout_constraintTop_toBottomOf="@+id/btnModificarDiseno" />
-
-    <Button
-        android:id="@+id/btnTutorial"
-        android:layout_width="250dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="2dp"
-        android:theme="@style/boton"
-        android:text="@string/tutorial"
-        android:textAlignment="center"
-        android:textSize="18sp"
-        android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/btnPrepararImpresion"
-        app:layout_constraintStart_toStartOf="@+id/btnPrepararImpresion"
-        app:layout_constraintTop_toBottomOf="@+id/btnPrepararImpresion" />
+        app:layout_constraintEnd_toEndOf="@+id/btnNueva"
+        app:layout_constraintStart_toStartOf="@+id/btnNueva"
+        app:layout_constraintTop_toBottomOf="@+id/btnNueva" />
+
 </android.support.constraint.ConstraintLayout>
