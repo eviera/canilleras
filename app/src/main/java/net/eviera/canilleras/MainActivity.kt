@@ -3,6 +3,7 @@ package net.eviera.canilleras
 import android.content.Intent
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
+import net.eviera.canilleras.Global.EXTRA_START_SCAN_QR
 
 class MainActivity : BaseActivity() {
 
@@ -11,8 +12,9 @@ class MainActivity : BaseActivity() {
         setContentView(R.layout.activity_main)
 
         btnIniciar.setOnClickListener {
-            val menuActity = Intent(this, MenuActivity::class.java)
-            startActivity(menuActity)
+            val scanQRLauncherActivity = Intent(this, ScanQRLauncherActivity::class.java)
+            scanQRLauncherActivity.putExtra(EXTRA_START_SCAN_QR, true)
+            startActivity(scanQRLauncherActivity)
             overridePendingTransitionEnter()
         }
     }

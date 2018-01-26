@@ -22,7 +22,8 @@
             android:resource="@array/preloaded_fonts" />
 
         <activity android:name=".MenuActivity" />
-        <activity android:name=".ScanQRActivity"></activity>
+        <activity android:name=".ScanQRActivity" />
+        <activity android:name=".ScanQRLauncherActivity"></activity>
     </application>
 
 </manifest>
