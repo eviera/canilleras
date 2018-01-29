@@ -3,7 +3,7 @@ package net.eviera.canilleras
 import android.content.Intent
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
-import net.eviera.canilleras.Global.EXTRA_START_SCAN_QR
+import net.eviera.canilleras.util.Global.EXTRA_START_SCAN_QR
 
 class MainActivity : BaseActivity() {
 
