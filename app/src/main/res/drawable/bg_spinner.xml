@@ -4,9 +4,7 @@
         <layer-list>
             <item >
                 <shape android:shape="rectangle">
-                    <solid android:color="@color/fondoBotones" />
-                    <stroke android:width="2px" android:color="@android:color/darker_gray" />
-                    <corners android:radius="5dp" />
+                    <solid android:color="@color/colorPrimaryDark" />
                     <padding
                         android:top="12dp"
                         android:bottom="12dp"
@@ -15,9 +13,8 @@
                 </shape>
             </item>
 
-            <item>
-                <bitmap android:gravity="right" android:src="ic_a" />
-            </item>
+            <item android:drawable="@drawable/ic_keyboard_arrow_down_black_24dp" android:gravity="right"/>
+
         </layer-list>
     </item>
 
