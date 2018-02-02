@@ -9,10 +9,15 @@
         <item name="android:windowBackground">@color/colorPrimary</item>
     </style>
 
-    <style name="boton" parent="@android:style/Widget.Button">
+    <style name="boton" parent="@style/Widget.AppCompat.Button">
         <item name="colorButtonNormal">@color/fondoBotones</item>
         <item name="android:textColor">@android:color/white</item>
         <item name="android:fontFamily">@font/allerta</item>
+    </style>
+
+    <style name="spinner" parent="@style/Widget.AppCompat.Spinner">
+        <item name="android:background">@drawable/bg_spinner</item>
+        <item name="android:popupBackground">@color/fondoSpinner</item>
     </style>
 
 

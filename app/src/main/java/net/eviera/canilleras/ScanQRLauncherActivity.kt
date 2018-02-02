@@ -19,15 +19,10 @@ class ScanQRLauncherActivity : BaseActivity() {
         } else {
             initView()
         }
-
     }
 
     private fun initView() {
         setContentView(R.layout.activity_scan_qrlauncher)
-
-        //Armo el combo de tipos de canilleras y seteo el que esta elegido (si lo esta)
-        setupTipoCanilleraSpinner(spnTipoCanillera)
-
     }
 
     private fun initScan() {

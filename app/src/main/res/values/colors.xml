@@ -5,6 +5,7 @@
     <color name="colorAccent">#CB2541</color>
 
     <color name="fondoBotones">#28adce</color>
+    <color name="fondoSpinner">@color/colorPrimaryDark</color>
 </resources>
 
 

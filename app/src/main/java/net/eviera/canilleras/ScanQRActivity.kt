@@ -1,9 +1,14 @@
 package net.eviera.canilleras
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.KeyEvent
+import android.view.View
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import com.journeyapps.barcodescanner.CaptureManager
 import kotlinx.android.synthetic.main.activity_scan_qr.*
+import net.eviera.canilleras.util.Global
 
 class ScanQRActivity : BaseActivity() {
 
@@ -20,7 +25,25 @@ class ScanQRActivity : BaseActivity() {
 
 
         //Armo el combo de tipos de canilleras y seteo el que esta elegido (si lo esta)
-        setupTipoCanilleraSpinner(spnTipoCanillera)
+        val tipoCanilleraAdapter = ArrayAdapter<Global.TipoCanillera>(this, android.R.layout.simple_spinner_item, Global.TipoCanillera.values())
+        spnTipoCanillera.adapter = tipoCanilleraAdapter
+        if (session.tipoCanillera != null) {
+            spnTipoCanillera.setSelection(tipoCanilleraAdapter.getPosition(session.tipoCanillera))
+        }
+        spnTipoCanillera.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
+                session.tipoCanillera = spnTipoCanillera.selectedItem as Global.TipoCanillera?
+
+                //Navego hacia el menu al seleccionar
+                val menuActivity = Intent(this@ScanQRActivity, MenuActivity::class.java)
+                startActivity(menuActivity)
+
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>) {
+                session.tipoCanillera = null
+            }
+        }
 
     }
 

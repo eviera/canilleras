@@ -11,7 +11,7 @@
     <string name="codigo_qr_invalido">Código QR inválido</string>
     <string name="cancelado">Cancelado</string>
     <string name="escanee_el_c_digo_qr_de_la_caja">Escaneá el código QR de la caja</string>
-    <string name="o_el_jalo_de_aqu">… o elegí uno de acá</string>
-    <string name="reintent_escanear_el_c_digo_qr">Reintentá escanear el código QR</string>
+    <string name="o_el_jalo_de_aqu">… o elegí un tipo de canillera de acá</string>
+    <string name="reintent_escanear_el_c_digo_qr">Reintentá escanear\nel código QR</string>
 </resources>
 

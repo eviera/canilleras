@@ -2,20 +2,14 @@
 
     <item>
         <layer-list>
-            <item >
+            <item>
                 <shape android:shape="rectangle">
-                    <solid android:color="@color/fondoBotones" />
-                    <stroke android:width="2px" android:color="@android:color/darker_gray" />
-                    <corners android:radius="5dp" />
-                    <padding
-                        android:top="12dp"
-                        android:bottom="12dp"
-                        android:left="8dp"
-                        android:right="16dp"/>
+                    <solid android:color="@color/fondoSpinner" />
+                    <padding android:bottom="12dp" android:left="8dp" android:right="16dp" android:top="12dp" />
                 </shape>
             </item>
 
-            <item android:drawable="@drawable/ic_keyboard_arrow_down_black_24dp" android:gravity="right"/>
+            <item android:drawable="@drawable/ic_keyboard_arrow_down_black_24dp" android:gravity="right" />
 
         </layer-list>
     </item>

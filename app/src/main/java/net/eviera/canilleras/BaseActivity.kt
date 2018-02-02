@@ -35,23 +35,4 @@ open class BaseActivity : AppCompatActivity() {
             }
         }
 
-    /**
-     * Hace el setup del combo de selección de tipo de canillera
-     */
-    protected fun setupTipoCanilleraSpinner(spnTipoCanillera: Spinner) {
-        val tipoCanilleraAdapter = ArrayAdapter<Global.TipoCanillera>(this, android.R.layout.simple_spinner_item, Global.TipoCanillera.values())
-        spnTipoCanillera.adapter = tipoCanilleraAdapter
-        if (session.tipoCanillera != null) {
-            spnTipoCanillera.setSelection(tipoCanilleraAdapter.getPosition(session.tipoCanillera))
-        }
-        spnTipoCanillera.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
-                session.tipoCanillera = spnTipoCanillera.selectedItem as Global.TipoCanillera?
-            }
-            override fun onNothingSelected(parent: AdapterView<*>) {
-                session.tipoCanillera = null
-            }
-        }
-    }
-
 }
