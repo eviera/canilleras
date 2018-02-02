@@ -15,9 +15,8 @@
                 </shape>
             </item>
 
-            <item>
-                <bitmap android:gravity="right" android:src="@android:drawable/arrow_down_float" />
-            </item>
+            <item android:drawable="@drawable/ic_keyboard_arrow_down_black_24dp" android:gravity="right"/>
+
         </layer-list>
     </item>
 
