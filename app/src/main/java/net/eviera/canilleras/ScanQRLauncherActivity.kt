@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import com.google.zxing.integration.android.IntentIntegrator
-import kotlinx.android.synthetic.main.activity_scan_qr.*
 import net.eviera.canilleras.util.Global.EXTRA_START_SCAN_QR
 
 class ScanQRLauncherActivity : BaseActivity() {

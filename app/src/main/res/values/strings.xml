@@ -13,5 +13,9 @@
     <string name="escanee_el_c_digo_qr_de_la_caja">Escaneá el código QR de la caja</string>
     <string name="o_el_jalo_de_aqu">… o elegí un tipo de canillera de acá</string>
     <string name="reintent_escanear_el_c_digo_qr">Reintentá escanear\nel código QR</string>
+    <string name="o_eleg_una_ac">… o elegí un modelo\npresionando acá</string>
+    <string name="cambiar_modelo">Cambiar Modelo</string>
+    <string name="elija_un_tipo">Elegí un Modelo</string>
+    <string name="seleccionado">Seleccionado:</string>
 </resources>
 

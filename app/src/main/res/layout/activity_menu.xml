@@ -25,13 +25,8 @@
         android:id="@+id/btnNueva"
         android:layout_width="250dp"
         android:layout_height="80dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:theme="@style/boton"
         android:text="@string/nueva_canillera"
-        android:textAlignment="center"
-        android:textSize="18sp"
-        android:textStyle="italic"
+        android:theme="@style/boton"
         app:layout_constraintBottom_toTopOf="@+id/btnCargar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -43,15 +38,25 @@
         android:id="@+id/btnCargar"
         android:layout_width="250dp"
         android:layout_height="80dp"
-        android:layout_marginTop="2dp"
         android:text="@string/cargar_dise_o"
-        android:textAlignment="center"
-        android:textSize="18sp"
-        android:textStyle="italic"
+        android:theme="@style/boton"
+        app:layout_constraintBottom_toTopOf="@+id/btnCambiarModelo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnNueva" />
+
+    <Button
+        android:id="@+id/btnCambiarModelo"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:onClick="cambiarModelo"
+        android:text="@string/cambiar_modelo"
         android:theme="@style/boton"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/btnNueva"
-        app:layout_constraintStart_toStartOf="@+id/btnNueva"
-        app:layout_constraintTop_toBottomOf="@+id/btnNueva" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCargar" />
 
 </android.support.constraint.ConstraintLayout>

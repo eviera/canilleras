@@ -23,4 +23,8 @@
 - ripple effect:  https://stackoverflow.com/questions/40008609/add-ripple-effect-to-my-button-with-button-background-color  
   - pre lollipop: https://stackoverflow.com/questions/30760822/how-to-create-ripple-effect-for-pre-lollipop
     
-    
+
+
+
+## Bugs
+- El dialogo de seleccion de tipos de canilleras no se ve en API 19 (blanco sobre blanco)

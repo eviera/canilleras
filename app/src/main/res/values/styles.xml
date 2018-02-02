@@ -13,12 +13,14 @@
         <item name="colorButtonNormal">@color/fondoBotones</item>
         <item name="android:textColor">@android:color/white</item>
         <item name="android:fontFamily">@font/allerta</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">italic</item>
     </style>
 
     <style name="spinner" parent="@style/Widget.AppCompat.Spinner">
         <item name="android:background">@drawable/bg_spinner</item>
         <item name="android:popupBackground">@color/fondoSpinner</item>
     </style>
-
 
 </resources>

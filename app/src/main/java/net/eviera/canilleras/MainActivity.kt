@@ -12,9 +12,17 @@ class MainActivity : BaseActivity() {
         setContentView(R.layout.activity_main)
 
         btnIniciar.setOnClickListener {
-            val scanQRLauncherActivity = Intent(this, ScanQRLauncherActivity::class.java)
-            scanQRLauncherActivity.putExtra(EXTRA_START_SCAN_QR, true)
-            startActivity(scanQRLauncherActivity)
+
+            //Si ya tengo un tipo de canillera elegida, me voy al menu, sino, al scanner de QR
+            if (session.tipoCanillera != null) {
+                val menuActivity = Intent(this, MenuActivity::class.java)
+                startActivity(menuActivity)
+
+            } else {
+                val scanQRLauncherActivity = Intent(this, ScanQRLauncherActivity::class.java)
+                scanQRLauncherActivity.putExtra(EXTRA_START_SCAN_QR, true)
+                startActivity(scanQRLauncherActivity)
+            }
             overridePendingTransitionEnter()
         }
     }

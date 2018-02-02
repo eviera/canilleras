@@ -1,14 +1,16 @@
 package net.eviera.canilleras
 
+import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.View
-import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import com.journeyapps.barcodescanner.CaptureManager
 import kotlinx.android.synthetic.main.activity_scan_qr.*
 import net.eviera.canilleras.util.Global
+
 
 class ScanQRActivity : BaseActivity() {
 
@@ -23,28 +25,28 @@ class ScanQRActivity : BaseActivity() {
         capture.initializeFromIntent(intent, savedInstanceState)
         capture.decode()
 
+    }
 
-        //Armo el combo de tipos de canilleras y seteo el que esta elegido (si lo esta)
-        val tipoCanilleraAdapter = ArrayAdapter<Global.TipoCanillera>(this, android.R.layout.simple_spinner_item, Global.TipoCanillera.values())
-        spnTipoCanillera.adapter = tipoCanilleraAdapter
-        if (session.tipoCanillera != null) {
-            spnTipoCanillera.setSelection(tipoCanilleraAdapter.getPosition(session.tipoCanillera))
-        }
-        spnTipoCanillera.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
-                session.tipoCanillera = spnTipoCanillera.selectedItem as Global.TipoCanillera?
+    fun seleccionarCanillera(view: View) {
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle(R.string.elija_un_tipo)
+        val adapter = ArrayAdapter<Global.TipoCanillera>(applicationContext, android.R.layout.simple_list_item_1, Global.TipoCanillera.values())
+        builder.setSingleChoiceItems(adapter, 0, { dialog, which ->
+            val selectedItem = Global.TipoCanillera.values()[which]
 
-                //Navego hacia el menu al seleccionar
-                val menuActivity = Intent(this@ScanQRActivity, MenuActivity::class.java)
-                startActivity(menuActivity)
+            //Guardo la seleccion en la session
+            session.tipoCanillera = selectedItem
 
-            }
+            //Muestro la seleccion
+            Toast.makeText(this, resources.getString(R.string.seleccionado) + " " + selectedItem, Toast.LENGTH_SHORT).show()
+            dialog.dismiss()
 
-            override fun onNothingSelected(parent: AdapterView<*>) {
-                session.tipoCanillera = null
-            }
-        }
+            //Navego hacia el menu al seleccionar
+            val menuActivity = Intent(this@ScanQRActivity, MenuActivity::class.java)
+            startActivity(menuActivity)
 
+        })
+        builder.show()
     }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
