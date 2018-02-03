@@ -20,6 +20,7 @@ class ScanQRActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_scan_qr)
 
+
         //Seteo la captura
         capture = CaptureManager(this, barcodeScannerView)
         capture.initializeFromIntent(intent, savedInstanceState)

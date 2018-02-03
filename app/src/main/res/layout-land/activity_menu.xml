@@ -5,21 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-    <ImageView
+    <include
         android:id="@+id/logo"
+        layout="@layout/include_logo"
         android:layout_width="0dp"
         android:layout_height="70dp"
-        android:background="@color/colorPrimaryDark"
-        android:contentDescription="@string/logo"
         android:paddingBottom="10dp"
         android:paddingEnd="10dp"
         android:paddingStart="10dp"
-        android:scaleType="fitStart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo_blanco" />
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <Button
         android:id="@+id/btnNueva"

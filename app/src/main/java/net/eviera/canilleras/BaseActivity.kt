@@ -1,15 +1,31 @@
 package net.eviera.canilleras
 
+import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.Spinner
+import android.widget.TextView
+import kotlinx.android.synthetic.main.include_logo.*
 import net.eviera.canilleras.manager.CaniApp
 import net.eviera.canilleras.manager.Session
-import net.eviera.canilleras.util.Global
 
 open class BaseActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+        //Intento pintar el texto del tipo de canillera que esta en el logo
+        val logoView = findViewById<View>(R.id.logo);
+        if (logoView != null) {
+            val logoTipoModelo = logoView.findViewById<TextView>(R.id.logo_tipo_modelo);
+            if (logoTipoModelo != null && session.tipoCanillera != null) {
+                logoTipoModelo.text = session.tipoCanillera.toString();
+            }
+        }
+    }
 
     /**
      * Overrides the pending Activity transition by performing the "Enter" animation.
