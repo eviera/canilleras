@@ -27,4 +27,4 @@
 
 
 ## Bugs
-- El dialogo de seleccion de tipos de canilleras no se ve en API 19 (blanco sobre blanco)
+- ~~El dialogo de seleccion de tipos de canilleras no se ve en API 19 (blanco sobre blanco)~~

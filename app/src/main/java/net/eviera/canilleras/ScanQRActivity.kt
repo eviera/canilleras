@@ -31,7 +31,7 @@ class ScanQRActivity : BaseActivity() {
     fun seleccionarCanillera(view: View) {
         val builder = AlertDialog.Builder(this)
         builder.setTitle(R.string.elija_un_tipo)
-        val adapter = ArrayAdapter<Global.TipoCanillera>(applicationContext, android.R.layout.simple_list_item_1, Global.TipoCanillera.values())
+        val adapter = ArrayAdapter<Global.TipoCanillera>(this, android.R.layout.simple_list_item_1, Global.TipoCanillera.values())
         builder.setSingleChoiceItems(adapter, 0, { dialog, which ->
             val selectedItem = Global.TipoCanillera.values()[which]
 
