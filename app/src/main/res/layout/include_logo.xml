@@ -35,6 +35,6 @@
         app:layout_constraintBottom_toBottomOf="@+id/logo_logo"
         app:layout_constraintEnd_toEndOf="@+id/logo_logo"
         app:layout_constraintTop_toTopOf="@+id/logo_logo"
-        tools:text="Tito" />
+        tools:text="Modelo" />
 
 </android.support.constraint.ConstraintLayout>
