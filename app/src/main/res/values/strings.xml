@@ -17,5 +17,8 @@
     <string name="cambiar_modelo">Cambiar Modelo</string>
     <string name="elija_un_tipo">Elegí un Modelo</string>
     <string name="seleccionado">Seleccionado:</string>
+    <string name="cargar">Cargar</string>
+    <string name="imprimir">Imprimir</string>
+    <string name="guardar">Guardar</string>
 </resources>
 

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="net.eviera.canilleras.CuatroCanillerasActivity">
+
+    <include
+        android:id="@+id/logo"
+        layout="@layout/include_logo"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:paddingBottom="10dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnCargar"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/cargar"
+        android:theme="@style/boton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnImprimir"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <Button
+        android:id="@+id/btnImprimir"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:text="@string/imprimir"
+        android:theme="@style/boton"
+        app:layout_constraintBottom_toBottomOf="@+id/btnCargar"
+        app:layout_constraintEnd_toStartOf="@+id/btnGuardar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnCargar"
+        app:layout_constraintTop_toTopOf="@+id/btnCargar"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <Button
+        android:id="@+id/btnGuardar"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:text="@string/guardar"
+        android:theme="@style/boton"
+        app:layout_constraintBottom_toBottomOf="@+id/btnImprimir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnImprimir"
+        app:layout_constraintTop_toTopOf="@+id/btnImprimir"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <net.eviera.canilleras.view.PlantillaView
+        android:id="@+id/plantilla_arr_izq"
+        android:layout_width="90dp"
+        android:layout_height="160dp"
+        android:background="@drawable/bg_borde_imageview"
+        android:scaleType="fitCenter"
+        tools:layout_editor_absoluteX="98dp"
+        tools:layout_editor_absoluteY="122dp"
+        tools:src="@drawable/prueba_plantilla_fondo_blanco" />
+
+    <net.eviera.canilleras.view.PlantillaView
+        android:id="@+id/plantilla_arr_der"
+        android:layout_width="88dp"
+        android:layout_height="200dp"
+        android:background="@drawable/bg_borde_imageview"
+        android:scaleType="fitCenter"
+        tools:layout_editor_absoluteX="260dp"
+        tools:layout_editor_absoluteY="122dp"
+        tools:src="@drawable/prueba_plantilla_fondo_blanco" />
+
+    <net.eviera.canilleras.view.PlantillaView
+        android:id="@+id/plantilla_abj_izq"
+        android:layout_width="91dp"
+        android:layout_height="161dp"
+        android:background="@drawable/bg_borde_imageview"
+        android:scaleType="fitCenter"
+        tools:layout_editor_absoluteX="88dp"
+        tools:layout_editor_absoluteY="330dp"
+        tools:src="@drawable/prueba_plantilla_fondo_blanco" />
+
+    <net.eviera.canilleras.view.PlantillaView
+        android:id="@+id/plantilla_abj_der"
+        android:layout_width="90dp"
+        android:layout_height="160dp"
+        android:background="@drawable/bg_borde_imageview"
+        android:scaleType="fitCenter"
+        tools:layout_editor_absoluteX="231dp"
+        tools:layout_editor_absoluteY="340dp"
+        tools:src="@drawable/prueba_plantilla_fondo_blanco" />
+
+</android.support.constraint.ConstraintLayout>

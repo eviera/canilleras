@@ -23,8 +23,11 @@
 - ripple effect:  https://stackoverflow.com/questions/40008609/add-ripple-effect-to-my-button-with-button-background-color  
   - pre lollipop: https://stackoverflow.com/questions/30760822/how-to-create-ripple-effect-for-pre-lollipop
     
+### Custom ImageView
+- https://github.com/cesards/CropImageView/blob/master/cropimageview/src/main/java/com/cesards/cropimageview/CropImageView.java
 
-
+### Inkscape
+- Substraer (Path/Substract) https://graphicdesign.stackexchange.com/questions/78355/how-to-subtract-a-shape-from-other-shape-on-inkscape
 
 ## Bugs
 - ~~El dialogo de seleccion de tipos de canilleras no se ve en API 19 (blanco sobre blanco)~~
