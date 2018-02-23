@@ -14,18 +14,22 @@ class CuatroCanillerasActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cuatro_canilleras)
 
-        val plantillaFondoBlanco = ContextCompat.getDrawable(this, R.drawable.prueba_plantilla_fondo_blanco)
+        val plantillaFondoBlancoConEdit = ContextCompat.getDrawable(this, R.drawable.prueba_fondo_blanco_con_borde_y_edit)
+        val bgBordeImageview = ContextCompat.getDrawable(this, R.drawable.bg_borde_imageview)
         val pele = ContextCompat.getDrawable(this, R.drawable.pele)
 
-        val layers = arrayOf<Drawable?>(pele, plantillaFondoBlanco)
-        val layerDrawable = LayerDrawable(layers)
-        plantilla_arr_izq.scaleType = ImageView.ScaleType.FIT_CENTER
+        val layerDrawable = LayerDrawable(arrayOf<Drawable?>(bgBordeImageview, pele, plantillaFondoBlancoConEdit))
         plantilla_arr_izq.setImageDrawable(layerDrawable)
+        //plantilla_arr_izq.setBackgroundResource(R.drawable.bg_borde_imageview)
 
         //frut
-        plantilla_arr_der.setImageDrawable(plantillaFondoBlanco)
-        plantilla_abj_izq.setImageDrawable(plantillaFondoBlanco)
-        plantilla_abj_der.setImageDrawable(plantillaFondoBlanco)
+        val layerDrawableVacio = LayerDrawable(arrayOf<Drawable?>(bgBordeImageview, plantillaFondoBlancoConEdit))
+        plantilla_arr_der.setImageDrawable(layerDrawableVacio)
+        plantilla_abj_izq.setImageDrawable(layerDrawableVacio)
+        plantilla_abj_der.setImageDrawable(layerDrawableVacio)
+
 
     }
 }
+
+
