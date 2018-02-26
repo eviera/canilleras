@@ -13,13 +13,13 @@ class PlantillaView(context: Context, attributeSet: AttributeSet) : AppCompatIma
 
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)
-
+/*
         if (canvas != null) {
             val paint = Paint(Paint.ANTI_ALIAS_FLAG)
             paint.style = Paint.Style.FILL
             paint.color = Color.BLUE
             canvas.drawCircle(100f,100f, 10f, paint)
         }
-
+*/
     }
 }
