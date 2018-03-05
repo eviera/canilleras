@@ -14,7 +14,7 @@ class MenuActivity : BaseActivity() {
 
     override fun onBackPressed() {
         super.onBackPressed()
-        overridePendingTransitionExit()
+        transitionSlideExit()
     }
 
     fun cambiarModelo(view: View) {
@@ -23,6 +23,6 @@ class MenuActivity : BaseActivity() {
         scanQRLauncherActivity.putExtra(Global.EXTRA_START_SCAN_QR, true)
         startActivity(scanQRLauncherActivity)
 
-        overridePendingTransitionExit()
+        transitionSlideExit()
     }
 }

@@ -23,7 +23,7 @@ class MainActivity : BaseActivity() {
                 scanQRLauncherActivity.putExtra(EXTRA_START_SCAN_QR, true)
                 startActivity(scanQRLauncherActivity)
             }
-            overridePendingTransitionEnter()
+            transitionSlideEnter()
         }
     }
 }

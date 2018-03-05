@@ -92,6 +92,7 @@
                 app:layout_constraintTop_toTopOf="@+id/plantilla_arr_der"
                 app:layout_editor_absoluteX="100dp"
                 app:layout_editor_absoluteY="100dp"
+                android:onClick="editCanillera"
                 tools:background="@drawable/bg_borde_imageview"
                 tools:src="@drawable/prueba_fondo_blanco_y_edit" />
 
