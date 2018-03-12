@@ -9,6 +9,7 @@ import android.content.Intent
 import android.R.attr.data
 import android.graphics.BitmapFactory
 import android.graphics.drawable.BitmapDrawable
+import android.view.Gravity
 
 
 class EditCanilleraActivity : BaseActivity() {
@@ -46,6 +47,8 @@ class EditCanilleraActivity : BaseActivity() {
 
                 val dataInputStream = contentResolver.openInputStream(data.data)
                 val bitmapDrawable = BitmapDrawable(resources, BitmapFactory.decodeStream(dataInputStream))
+                bitmapDrawable.setAntiAlias(true)
+                bitmapDrawable.gravity = Gravity.CENTER
                 val layerDrawable = LayerDrawable(arrayOf<Drawable?>(bgBordeImageview, bitmapDrawable, plantillaFondoBlancoConEdit_SIN_BORDER))
                 plantillaView.setImageDrawable(layerDrawable)
             }
