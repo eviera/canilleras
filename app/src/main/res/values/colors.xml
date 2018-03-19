@@ -6,6 +6,10 @@
 
     <color name="fondoBotones">#28adce</color>
     <color name="fondoSpinner">@color/colorPrimaryDark</color>
+
+    <color name="stroke_color">#8cf437</color>
+    <color name="transparent">#00FFFFFF</color>
+
 </resources>
 
 

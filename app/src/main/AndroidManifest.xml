@@ -19,16 +19,16 @@
         <activity android:name=".MenuActivity" />
         <activity android:name=".ScanQRActivity" />
         <activity android:name=".ScanQRLauncherActivity" />
-        <activity android:name=".CuatroCanillerasActivity">
-        </activity>
+        <activity android:name=".CuatroCanillerasActivity"></activity>
         <activity android:name=".EditCanilleraActivity" />
         <activity android:name=".BORRARActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
+        <activity android:name=".BORRARMotionView"></activity>
     </application>
 
 </manifest>
