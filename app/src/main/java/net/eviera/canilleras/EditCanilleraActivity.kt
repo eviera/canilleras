@@ -1,12 +1,9 @@
 package net.eviera.canilleras
 
-import android.graphics.drawable.Drawable
-import android.graphics.drawable.LayerDrawable
 import android.os.Bundle
 import android.support.v4.content.ContextCompat
 import kotlinx.android.synthetic.main.activity_edit_canillera.*
 import android.content.Intent
-import android.R.attr.data
 import android.graphics.BitmapFactory
 import android.graphics.drawable.BitmapDrawable
 import android.view.Gravity
@@ -24,11 +21,10 @@ class EditCanilleraActivity : BaseActivity() {
 
         plantillaView.setImageDrawable(pele)
 
-        plantillaView.setOnLongClickListener {
+        btnGaleria.setOnClickListener {
             val pickIntent = Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
             pickIntent.type = "image/*"
             startActivityForResult(pickIntent, PICK_IMAGE)
-            true
         }
 
     }

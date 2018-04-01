@@ -22,16 +22,11 @@
         android:id="@+id/plantillaView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        tools:src="@drawable/pele"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/fondoPlantilla"
         app:layout_constraintDimensionRatio="w,9:16"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintEnd_toEndOf="@+id/fondoPlantilla"
+        app:layout_constraintStart_toStartOf="@+id/fondoPlantilla"
+        app:layout_constraintTop_toTopOf="@+id/fondoPlantilla"
         app:zoomage_animateOnReset="true"
         app:zoomage_autoCenter="false"
         app:zoomage_autoResetMode="NEVER"
@@ -39,24 +34,53 @@
         app:zoomage_minScale="0.1"
         app:zoomage_restrictBounds="false"
         app:zoomage_translatable="true"
-        app:zoomage_zoomable="true" />
+        app:zoomage_zoomable="true"
+        tools:src="@drawable/pele" />
 
     <ImageView
         android:id="@+id/fondoPlantilla"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_borde_imageview_vacio"
         android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintDimensionRatio="w,9:16"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo"
-        app:srcCompat="@drawable/prueba_fondo_blanco"
-        android:background="@drawable/bg_borde_imageview_vacio"/>
+        app:layout_constraintVertical_chainStyle="spread"
+        app:srcCompat="@drawable/prueba_fondo_blanco" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fondoPlantilla"
+        app:layout_constraintVertical_bias="0.992">
+
+        <ImageButton
+            android:id="@+id/btnGaleria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:background="?android:selectableItemBackground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:drawable/ic_menu_gallery" />
+    </android.support.constraint.ConstraintLayout>
 
 
 </android.support.constraint.ConstraintLayout>
