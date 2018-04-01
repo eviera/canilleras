@@ -10,6 +10,7 @@ import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.PointF;
+import android.graphics.Rect;
 import android.graphics.RectF;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
@@ -28,7 +29,6 @@ public class ZoomageView extends AppCompatImageView implements ScaleGestureDetec
     private final float MIN_SCALE = 0.6f;
     private final float MAX_SCALE = 8f;
     private final int RESET_DURATION = 200;
-    private final Bitmap pruebaFondoBlanco;
 
     private ScaleType startScaleType;
 
@@ -73,9 +73,6 @@ public class ZoomageView extends AppCompatImageView implements ScaleGestureDetec
 
     public ZoomageView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-
-        //pruebaFondoBlanco = BitmapFactory.decodeResource(context.getResources(), R.drawable.prueba_fondo_blanco);
-        pruebaFondoBlanco = drawableToBitmap(context.getResources().getDrawable(R.drawable.prueba_fondo_blanco));
 
         scaleDetector = new ScaleGestureDetector(context, this);
         ScaleGestureDetectorCompat.setQuickScaleEnabled(scaleDetector, false);
@@ -680,33 +677,5 @@ public class ZoomageView extends AppCompatImageView implements ScaleGestureDetec
     }
 
 
-    @Override
-    protected void onDraw(Canvas canvas) {
-        super.onDraw(canvas);
 
-        if (canvas != null) {
-            Paint p = new Paint(Paint.ANTI_ALIAS_FLAG);
-            p.setColor(Color.BLUE);
-            p.setStyle(Paint.Style.FILL);
-
-            canvas.drawCircle(100f, 100f, 30f, p);
-
-            canvas.drawBitmap(pruebaFondoBlanco,0, 0, p);
-        }
-
-    }
-
-    public static Bitmap drawableToBitmap(Drawable drawable) {
-
-        if (drawable instanceof BitmapDrawable) {
-            return ((BitmapDrawable)drawable).getBitmap();
-        }
-
-        Bitmap bitmap = Bitmap.createBitmap(drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
-        Canvas canvas = new Canvas(bitmap);
-        drawable.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
-        drawable.draw(canvas);
-
-        return bitmap;
-    }
 }

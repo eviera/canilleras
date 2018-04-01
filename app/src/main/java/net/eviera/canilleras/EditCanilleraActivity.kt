@@ -16,21 +16,13 @@ class EditCanilleraActivity : BaseActivity() {
 
     private val PICK_IMAGE = 1
 
-    var plantillaFondoBlancoConEdit_SIN_BORDER: Drawable? = null
-    var bgBordeImageview: Drawable? = null
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit_canillera)
 
         val pele = ContextCompat.getDrawable(this, R.drawable.pele)
 
-
-        plantillaFondoBlancoConEdit_SIN_BORDER = ContextCompat.getDrawable(this, R.drawable.prueba_fondo_blanco)
-        bgBordeImageview = ContextCompat.getDrawable(this, R.drawable.bg_borde_imageview)
-
-        val layerDrawable = LayerDrawable(arrayOf<Drawable?>(bgBordeImageview, pele, plantillaFondoBlancoConEdit_SIN_BORDER))
-        plantillaView.setImageDrawable(layerDrawable)
+        plantillaView.setImageDrawable(pele)
 
         plantillaView.setOnLongClickListener {
             val pickIntent = Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
@@ -45,12 +37,12 @@ class EditCanilleraActivity : BaseActivity() {
         if (requestCode == PICK_IMAGE) {
             if (data != null) {
 
+                //todo mejorar
                 val dataInputStream = contentResolver.openInputStream(data.data)
                 val bitmapDrawable = BitmapDrawable(resources, BitmapFactory.decodeStream(dataInputStream))
                 bitmapDrawable.setAntiAlias(true)
                 bitmapDrawable.gravity = Gravity.CENTER
-                val layerDrawable = LayerDrawable(arrayOf<Drawable?>(bgBordeImageview, bitmapDrawable, plantillaFondoBlancoConEdit_SIN_BORDER))
-                plantillaView.setImageDrawable(layerDrawable)
+                plantillaView.setImageDrawable(bitmapDrawable)
             }
         }
     }

@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="view.PlantillaView">
-    </declare-styleable>
 
     <declare-styleable name="ZoomageView">
         <attr name="zoomage_zoomable" format="boolean" />
