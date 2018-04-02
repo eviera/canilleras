@@ -18,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <net.eviera.canilleras.view.ZoomageView
+    <net.eviera.canilleras.view.motionview.MotionView
         android:id="@+id/plantillaView"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -26,16 +26,7 @@
         app:layout_constraintDimensionRatio="w,9:16"
         app:layout_constraintEnd_toEndOf="@+id/fondoPlantilla"
         app:layout_constraintStart_toStartOf="@+id/fondoPlantilla"
-        app:layout_constraintTop_toTopOf="@+id/fondoPlantilla"
-        app:zoomage_animateOnReset="true"
-        app:zoomage_autoCenter="false"
-        app:zoomage_autoResetMode="NEVER"
-        app:zoomage_maxScale="8"
-        app:zoomage_minScale="0.1"
-        app:zoomage_restrictBounds="false"
-        app:zoomage_translatable="true"
-        app:zoomage_zoomable="true"
-        tools:src="@drawable/pele" />
+        app:layout_constraintTop_toTopOf="@+id/fondoPlantilla" />
 
     <ImageView
         android:id="@+id/fondoPlantilla"

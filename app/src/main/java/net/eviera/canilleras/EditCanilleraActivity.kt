@@ -1,12 +1,12 @@
 package net.eviera.canilleras
 
-import android.os.Bundle
-import android.support.v4.content.ContextCompat
-import kotlinx.android.synthetic.main.activity_edit_canillera.*
 import android.content.Intent
+import android.graphics.Bitmap
 import android.graphics.BitmapFactory
-import android.graphics.drawable.BitmapDrawable
-import android.view.Gravity
+import android.os.Bundle
+import kotlinx.android.synthetic.main.activity_edit_canillera.*
+import net.eviera.canilleras.view.motionview.entity.ImageEntity
+import net.eviera.canilleras.view.motionview.viewmodel.Layer
 
 
 class EditCanilleraActivity : BaseActivity() {
@@ -17,9 +17,7 @@ class EditCanilleraActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit_canillera)
 
-        val pele = ContextCompat.getDrawable(this, R.drawable.pele)
-
-        plantillaView.setImageDrawable(pele)
+        addSticker(R.drawable.pele)
 
         btnGaleria.setOnClickListener {
             val pickIntent = Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
@@ -32,20 +30,33 @@ class EditCanilleraActivity : BaseActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (requestCode == PICK_IMAGE) {
             if (data != null) {
-
-                //todo mejorar
                 val dataInputStream = contentResolver.openInputStream(data.data)
-                val bitmapDrawable = BitmapDrawable(resources, BitmapFactory.decodeStream(dataInputStream))
-                bitmapDrawable.setAntiAlias(true)
-                bitmapDrawable.gravity = Gravity.CENTER
-                plantillaView.setImageDrawable(bitmapDrawable)
+                val bitmap = BitmapFactory.decodeStream(dataInputStream)
+                addSticker(bitmap)
             }
         }
     }
 
     override fun onBackPressed() {
         super.onBackPressed()
-
         transitionZoomExit()
     }
+
+
+    private fun addSticker(stickerResId: Int) {
+        plantillaView.post({
+            val layer = Layer()
+            val pica = BitmapFactory.decodeResource(resources, stickerResId)
+            val entity = ImageEntity(layer, pica, plantillaView.width, plantillaView.height)
+            plantillaView.addEntityAndPosition(entity)
+        })
+    }
+
+    private fun addSticker(bitmap: Bitmap) {
+        plantillaView.post({
+            val entity = ImageEntity(Layer(), bitmap, plantillaView.width, plantillaView.height)
+            plantillaView.addEntityAndPosition(entity)
+        })
+    }
+
 }
