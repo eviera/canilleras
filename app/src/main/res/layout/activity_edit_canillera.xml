@@ -60,6 +60,20 @@
         app:layout_constraintVertical_bias="0.992">
 
         <ImageButton
+            android:id="@+id/btnAddText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:background="?android:selectableItemBackground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnGaleria"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ic_add_text" />
+
+        <ImageButton
             android:id="@+id/btnGaleria"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -70,8 +84,61 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@android:drawable/ic_menu_gallery" />
+            app:srcCompat="@drawable/ic_image" />
     </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/textEntityEditPanel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo">
+
+        <ImageButton
+            android:id="@+id/text_entity_font_size_decrease"
+            android:layout_width="40dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:theme="@style/boton"
+            app:srcCompat="@drawable/ic_neg_1" />
+
+        <ImageButton
+            android:id="@+id/text_entity_font_size_increase"
+            android:layout_width="40dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:theme="@style/boton"
+            app:srcCompat="@drawable/ic_plus_1" />
+
+        <ImageButton
+            android:id="@+id/text_entity_color_change"
+            android:layout_width="40dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:theme="@style/boton"
+            app:srcCompat="@drawable/ic_format_color_text" />
+
+        <ImageButton
+            android:id="@+id/text_entity_font_change"
+            android:layout_width="40dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:theme="@style/boton"
+            app:srcCompat="@drawable/ic_text_fields" />
+
+        <ImageButton
+            android:id="@+id/text_entity_edit"
+            android:layout_width="40dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:theme="@style/boton"
+            app:srcCompat="@drawable/ic_mode_edit" />
+
+    </LinearLayout>
 
 
 </android.support.constraint.ConstraintLayout>
