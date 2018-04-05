@@ -16,6 +16,7 @@ import net.eviera.canilleras.view.motionview.entity.ImageEntity
 import net.eviera.canilleras.view.motionview.entity.MotionEntity
 import net.eviera.canilleras.view.motionview.entity.TextEntity
 import net.eviera.canilleras.view.motionview.utils.FontProvider
+import net.eviera.canilleras.view.motionview.viewmodel.Font
 import net.eviera.canilleras.view.motionview.viewmodel.Layer
 import net.eviera.canilleras.view.motionview.viewmodel.TextLayer
 
@@ -170,6 +171,32 @@ class EditCanilleraActivity : BaseActivity(), TextEditorDialogFragment.OnTextLay
                 plantillaView.invalidate()
             }
         }
+    }
+
+    fun addTextSticker(v: View) {
+        val textLayer = createTextLayer()
+        val textEntity = TextEntity(textLayer, plantillaView.width, plantillaView.height, fontProvider)
+        plantillaView.addEntityAndPosition(textEntity)
+
+        // move text sticker up so that its not hidden under keyboard
+        val center = textEntity.absoluteCenter()
+        center.y = center.y * 0.5f
+        textEntity.moveCenterTo(center)
+
+        // redraw
+        plantillaView.invalidate()
+
+        startTextEntityEditing()
+    }
+
+    private fun createTextLayer(): TextLayer {
+        val textLayer = TextLayer()
+        val font = Font()
+        font.color = TextLayer.Limits.INITIAL_FONT_COLOR
+        font.size = TextLayer.Limits.INITIAL_FONT_SIZE
+        font.typeface = fontProvider.defaultFontName
+        textLayer.font = font
+        return textLayer
     }
 
 
