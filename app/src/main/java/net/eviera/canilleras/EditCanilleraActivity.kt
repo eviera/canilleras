@@ -199,5 +199,12 @@ class EditCanilleraActivity : BaseActivity(), TextEditorDialogFragment.OnTextLay
         return textLayer
     }
 
+    fun showEditCanilleraHelp(v: View) {
+        val builder = android.app.AlertDialog.Builder(this)
+        builder.setTitle(R.string.como_editar)
+        builder.setMessage("sasa")
+        builder.show()
+    }
+
 
 }
