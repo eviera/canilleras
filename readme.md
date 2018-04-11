@@ -33,5 +33,8 @@
 - http://tutorials.jenkov.com/java-itext/image.html
 - https://stackoverflow.com/questions/30979732/itext-rectangle-from-milimeters
 
-## Bugs
+### Bugs
 - ~~El dialogo de seleccion de tipos de canilleras no se ve en API 19 (blanco sobre blanco)~~
+
+### Keystore
+- El kestore esta en Dropbox/keystore, passsdd
