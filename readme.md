@@ -1,3 +1,52 @@
+## TODO
+
+### General
+* Ver si no lo queremos fijar para orientacion vertical solamente
+  * De ser asi, matar las pantallas land
+* Pensar en que estructura almacenar cada diseño de 4 templates de canilleras. Quizas usando SQLite
+  * Podria ser un objeto unico, que tenga los 4 templates (un array[4] de objeto template), un nombre (con el que el usuario guarda la cuaterna), y un thumbnail (tomado quizas del primer template no vacio)
+  * Ver como guardar las imagenes en SQLite
+ 
+
+### Pantalla Inicial
+* ✔ Parece estar todo
+
+### Eleccion de modelo o scan
+* ✔ Parece estar todo
+
+### Menu
+* Que funcione el boton Nueva Canillera
+  * Debe llevar a la pantalla de CuatroCanilleras con un objeto vacio
+* Que funcione el boton Cargar Diseño
+  * Debe llevar a lo mismo que el boton cargar de la pantalla de CuatroCanilleras
+* ✔ Boton Cambiar Modelo ya anda
+
+### Nueva Canillera / Pantalla CuatroCanilleras
+* Tiene que viajar a la pantalla CuatroCanilleras al clickear el menu Nueva Canillera
+* Cada uno de los cuatro templates de canillera tiene que estar asociado a un objeto que luego se va a persistir en la base
+* Al tocar en el lapicito del template, llevarlo a EditCanillera, transportando el objeto del template
+* Boton Cargar
+  * Podria listar en una pantalla tipo popup (como el multilist de seleccion de tipo de canillera), donde hay un thumbnail de la primer canillera, y el nombre que le dio el usuario
+  * Al elegir un elemento, dar un aviso que se van a reemplazar las actuales
+  * Cargar de la base los cuatro templates
+* Boton Guardar
+  * Pide un nombre para la cuaterna la primera vez
+  * Graba en la base el objeto y da un feedback de 'guardado' (quizas un disquette en fade en el centro)
+* Boton Imprimir
+  * TBD
+
+### Editar Canillera
+* Ver como cargar una imagen en el emulador
+* Persistir los cambios en el objeto template
+  * Creo que aca queremos persistir la imagen tal como la levantamos en la base de datos, con una posicion. Idem para el texto
+* Armar el help
+
+### Impresion
+* TBD
+ 
+    
+
+
 
 ## Links Utiles
 ### Rotacion/Drag/Zoom
@@ -38,3 +87,5 @@
 
 ### Keystore
 - El kestore esta en Dropbox/keystore, passsdd
+
+
