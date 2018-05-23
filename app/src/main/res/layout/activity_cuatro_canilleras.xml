@@ -78,7 +78,7 @@
             android:layout_height="match_parent"
             android:layout_weight="0.5">
 
-            <net.eviera.canilleras.view.PlantillaView
+            <ImageView
                 android:id="@+id/plantilla_arr_izq"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -92,10 +92,11 @@
                 app:layout_constraintTop_toTopOf="@+id/plantilla_arr_der"
                 app:layout_editor_absoluteX="100dp"
                 app:layout_editor_absoluteY="100dp"
+                android:onClick="editCanillera"
                 tools:background="@drawable/bg_borde_imageview"
                 tools:src="@drawable/prueba_fondo_blanco_y_edit" />
 
-            <net.eviera.canilleras.view.PlantillaView
+            <ImageView
                 android:id="@+id/plantilla_arr_der"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -122,7 +123,7 @@
             android:layout_height="match_parent"
             android:layout_weight="0.5">
 
-            <net.eviera.canilleras.view.PlantillaView
+            <ImageView
                 android:id="@+id/plantilla_abj_izq"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -139,7 +140,7 @@
                 tools:background="@drawable/bg_borde_imageview"
                 tools:src="@drawable/prueba_fondo_blanco_y_edit" />
 
-            <net.eviera.canilleras.view.PlantillaView
+            <ImageView
                 android:id="@+id/plantilla_abj_der"
                 android:layout_width="0dp"
                 android:layout_height="0dp"

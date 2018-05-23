@@ -1,5 +1,6 @@
 package net.eviera.canilleras
 
+import android.content.Intent
 import android.graphics.drawable.Drawable
 import android.graphics.drawable.LayerDrawable
 import android.os.Bundle
@@ -11,9 +12,10 @@ import android.opengl.ETC1.getHeight
 import android.opengl.ETC1.getWidth
 import android.graphics.Bitmap
 import android.graphics.Canvas
+import android.view.View
 
 
-class CuatroCanillerasActivity : AppCompatActivity() {
+class CuatroCanillerasActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -66,6 +68,13 @@ class CuatroCanillerasActivity : AppCompatActivity() {
         plantilla_abj_der.setImageDrawable(layerDrawableVacio)
 
 
+    }
+
+    fun editCanillera(v: View) {
+        val editCanilleraActivity = Intent(this, EditCanilleraActivity::class.java)
+        startActivity(editCanilleraActivity)
+
+        transitionZoomExit()
     }
 }
 

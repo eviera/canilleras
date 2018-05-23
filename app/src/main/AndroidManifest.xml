@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="net.eviera.canilleras">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:name=".manager.CaniApp"
         android:allowBackup="true"
@@ -10,13 +13,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-        </activity>
-
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
+        <activity android:name=".MainActivity">
+        </activity>
         <activity android:name=".MenuActivity" />
         <activity android:name=".ScanQRActivity" />
         <activity android:name=".ScanQRLauncherActivity" />
@@ -25,8 +27,9 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
+        <activity android:name=".EditCanilleraActivity"></activity>
+        <activity android:name=".BORRARPdf" />
     </application>
 
 </manifest>

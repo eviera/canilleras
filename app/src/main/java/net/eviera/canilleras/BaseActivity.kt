@@ -30,16 +30,21 @@ open class BaseActivity : AppCompatActivity() {
     /**
      * Overrides the pending Activity transition by performing the "Enter" animation.
      */
-    protected fun overridePendingTransitionEnter() {
+    protected fun transitionSlideEnter() {
         overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left)
     }
 
     /**
      * Overrides the pending Activity transition by performing the "Exit" animation.
      */
-    protected fun overridePendingTransitionExit() {
+    protected fun transitionSlideExit() {
         overridePendingTransition(R.anim.slide_from_left, R.anim.slide_to_right)
     }
+
+    protected fun transitionZoomExit() {
+        overridePendingTransition(R.anim.zoom_enter, R.anim.zoom_exit)
+    }
+
 
     val session : Session
         get() {

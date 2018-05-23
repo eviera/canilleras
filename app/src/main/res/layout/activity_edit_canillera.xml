@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="net.eviera.canilleras.EditCanilleraActivity">
+
+    <include
+        android:id="@+id/logo"
+        layout="@layout/include_logo"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:paddingBottom="10dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <net.eviera.canilleras.view.motionview.MotionView
+        android:id="@+id/plantillaView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fondoPlantilla"
+        app:layout_constraintDimensionRatio="w,9:16"
+        app:layout_constraintEnd_toEndOf="@+id/fondoPlantilla"
+        app:layout_constraintStart_toStartOf="@+id/fondoPlantilla"
+        app:layout_constraintTop_toTopOf="@+id/fondoPlantilla" />
+
+    <ImageView
+        android:id="@+id/fondoPlantilla"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_borde_imageview_vacio"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintDimensionRatio="w,9:16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintVertical_chainStyle="spread"
+        app:srcCompat="@drawable/prueba_fondo_blanco" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fondoPlantilla"
+        app:layout_constraintVertical_bias="0.992">
+
+        <ImageButton
+            android:id="@+id/btnAddText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="4dp"
+            android:background="?android:selectableItemBackground"
+            android:onClick="addTextSticker"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnGaleria"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_add_text" />
+
+        <ImageButton
+            android:id="@+id/btnGaleria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="4dp"
+            android:background="?android:selectableItemBackground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_image" />
+
+        <ImageButton
+            android:id="@+id/btnHelp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="4dp"
+            android:background="?android:selectableItemBackground"
+            android:onClick="showEditCanilleraHelp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_help_outline_white" />
+    </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/textEntityEditPanel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo">
+
+        <ImageButton
+            android:id="@+id/text_entity_font_size_decrease"
+            android:layout_width="40dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:theme="@style/boton"
+            app:srcCompat="@drawable/ic_neg_1" />
+
+        <ImageButton
+            android:id="@+id/text_entity_font_size_increase"
+            android:layout_width="40dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:theme="@style/boton"
+            app:srcCompat="@drawable/ic_plus_1" />
+
+        <ImageButton
+            android:id="@+id/text_entity_color_change"
+            android:layout_width="40dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:theme="@style/boton"
+            app:srcCompat="@drawable/ic_format_color_text" />
+
+        <ImageButton
+            android:id="@+id/text_entity_font_change"
+            android:layout_width="40dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:theme="@style/boton"
+            app:srcCompat="@drawable/ic_text_fields" />
+
+        <ImageButton
+            android:id="@+id/text_entity_edit"
+            android:layout_width="40dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:theme="@style/boton"
+            app:srcCompat="@drawable/ic_mode_edit" />
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
