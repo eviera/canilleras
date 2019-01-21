@@ -14,7 +14,7 @@ class MainActivity : BaseActivity() {
         btnIniciar.setOnClickListener {
 
             //Si ya tengo un tipo de canillera elegida, me voy al menu, sino, al scanner de QR
-            if (session.tipoCanillera != null) {
+            if (session.project.tipoCanillera != null) {
                 val menuActivity = Intent(this, MenuActivity::class.java)
                 startActivity(menuActivity)
 
