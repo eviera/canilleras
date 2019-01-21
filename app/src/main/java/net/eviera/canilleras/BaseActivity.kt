@@ -21,8 +21,8 @@ open class BaseActivity : AppCompatActivity() {
         val logoView = findViewById<View>(R.id.logo);
         if (logoView != null) {
             val logoTipoModelo = logoView.findViewById<TextView>(R.id.logo_tipo_modelo);
-            if (logoTipoModelo != null && session.tipoCanillera != null) {
-                logoTipoModelo.text = session.tipoCanillera.toString();
+            if (logoTipoModelo != null && session.project.tipoCanillera != null) {
+                logoTipoModelo.text = session.project.tipoCanillera.toString();
             }
         }
     }

@@ -6,9 +6,4 @@ class CaniApp : Application() {
 
     val session = Session()
 
-    override fun onCreate() {
-        super.onCreate()
-
-    }
-
 }

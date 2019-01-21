@@ -36,7 +36,7 @@ class ScanQRActivity : BaseActivity() {
             val selectedItem = Global.TipoCanillera.values()[which]
 
             //Guardo la seleccion en la session
-            session.tipoCanillera = selectedItem
+            session.project.tipoCanillera = selectedItem
 
             //Muestro la seleccion
             Toast.makeText(this, resources.getString(R.string.seleccionado) + " " + selectedItem, Toast.LENGTH_SHORT).show()

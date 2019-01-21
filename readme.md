@@ -7,15 +7,19 @@
   * Podria ser un objeto unico, que tenga los 4 templates (un array[4] de objeto template), un nombre (con el que el usuario guarda la cuaterna), y un thumbnail (tomado quizas del primer template no vacio)
   * ~~Ver como guardar las imagenes en SQLite~~
   * Guardar las imagenes en la SD-card y en el SQLite solo dejar el path a donde estan
+* Tener una sesion para guardar el proyecto actual  
  
 
 ### Pantalla Inicial
 * ✔ Parece estar todo
 
 ### Eleccion de modelo o scan
-* ✔ Parece estar todo
+* Crear un nuevo proyecto con el modelo elegido y subirlo a la sesion
+* Permitir el cambio de modelo al tocar el texto del modelo arriba a la izquierda
 
 ### Menu
+* Matar el menu ? Al elegir modelo, deberia ir a la edicion del proyecto (CuatroCanilleras) con uno vacio
+  * Si matamos el menu, hay que poder cambiar el modelo en la pantalla de cuatro canilleras
 * Que funcione el boton Nueva Canillera
   * Debe llevar a la pantalla de CuatroCanilleras con un objeto vacio
 * Que funcione el boton Cargar Diseño

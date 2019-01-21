@@ -1,9 +1,9 @@
 package net.eviera.canilleras.manager
 
-import net.eviera.canilleras.util.Global
+import net.eviera.canilleras.entity.Project
 
-class Session {
+class Session() {
 
-    var tipoCanillera : Global.TipoCanillera? = null
+    var project = Project()
 
 }
