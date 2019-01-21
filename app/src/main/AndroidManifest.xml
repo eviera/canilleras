@@ -17,19 +17,18 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MenuActivity" />
-        <activity android:name=".ScanQRActivity" />
-        <activity android:name=".ScanQRLauncherActivity" />
-        <activity android:name=".CuatroCanillerasActivity">
-        </activity>
-        <activity android:name=".EditCanilleraActivity"></activity>
-        <activity android:name=".BORRARPdf" />
+        <activity android:name=".MenuActivity" android:screenOrientation="portrait" />
+        <activity android:name=".ScanQRActivity" android:screenOrientation="portrait" />
+        <activity android:name=".ScanQRLauncherActivity" android:screenOrientation="portrait" />
+        <activity android:name=".CuatroCanillerasActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".EditCanilleraActivity" android:screenOrientation="portrait" />
+        <activity android:name=".BORRARPdf" android:screenOrientation="portrait" />
     </application>
 
 </manifest>

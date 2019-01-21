@@ -1,8 +1,8 @@
 ## TODO
 
 ### General
-* Fijar para orientacion vertical solamente
-  * Matar las pantallas land
+* ✔ Fijar para orientacion vertical solamente
+  * ✔ Matar las pantallas land
 * Pensar en que estructura almacenar cada diseño de 4 templates de canilleras. Quizas usando SQLite
   * Podria ser un objeto unico, que tenga los 4 templates (un array[4] de objeto template), un nombre (con el que el usuario guarda la cuaterna), y un thumbnail (tomado quizas del primer template no vacio)
   * ~~Ver como guardar las imagenes en SQLite~~
