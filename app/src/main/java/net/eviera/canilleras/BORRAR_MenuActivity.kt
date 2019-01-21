@@ -5,11 +5,11 @@ import android.os.Bundle
 import android.view.View
 import net.eviera.canilleras.util.Global
 
-class MenuActivity : BaseActivity() {
+class BORRAR_MenuActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_menu)
+        setContentView(R.layout.borrar_activity_menu)
     }
 
     override fun onBackPressed() {

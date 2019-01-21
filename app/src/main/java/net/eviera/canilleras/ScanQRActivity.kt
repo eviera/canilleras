@@ -32,7 +32,7 @@ class ScanQRActivity : BaseActivity() {
         val builder = AlertDialog.Builder(this)
         builder.setTitle(R.string.elija_un_tipo)
         val adapter = ArrayAdapter<Global.TipoCanillera>(this, android.R.layout.simple_list_item_1, Global.TipoCanillera.values())
-        builder.setSingleChoiceItems(adapter, 0, { dialog, which ->
+        builder.setSingleChoiceItems(adapter, 0) { dialog, which ->
             val selectedItem = Global.TipoCanillera.values()[which]
 
             //Guardo la seleccion en la session
@@ -42,11 +42,11 @@ class ScanQRActivity : BaseActivity() {
             Toast.makeText(this, resources.getString(R.string.seleccionado) + " " + selectedItem, Toast.LENGTH_SHORT).show()
             dialog.dismiss()
 
-            //Navego hacia el menu al seleccionar
-            val menuActivity = Intent(this@ScanQRActivity, MenuActivity::class.java)
-            startActivity(menuActivity)
+            //Navego hacia cuatro canilleras al seleccionar
+            val cuatroCanillerasActivity = Intent(this@ScanQRActivity, CuatroCanillerasActivity::class.java)
+            startActivity(cuatroCanillerasActivity)
 
-        })
+        }
         builder.show()
     }
 

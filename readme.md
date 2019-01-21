@@ -17,13 +17,13 @@
 * Crear un nuevo proyecto con el modelo elegido y subirlo a la sesion
 * Permitir el cambio de modelo al tocar el texto del modelo arriba a la izquierda
 
-### Menu
-* Matar el menu ? Al elegir modelo, deberia ir a la edicion del proyecto (CuatroCanilleras) con uno vacio
-  * Si matamos el menu, hay que poder cambiar el modelo en la pantalla de cuatro canilleras
-* Que funcione el boton Nueva Canillera
-  * Debe llevar a la pantalla de CuatroCanilleras con un objeto vacio
-* Que funcione el boton Cargar Diseño
-  * Debe llevar a lo mismo que el boton cargar de la pantalla de CuatroCanilleras
+### ✔ Menu
+* ✔ Matar el menu ? Al elegir modelo, deberia ir a la edicion del proyecto (CuatroCanilleras) con uno vacio
+  * ✔ Si matamos el menu, hay que poder cambiar el modelo en la pantalla de cuatro canilleras
+* ~~Que funcione el boton Nueva Canillera~~
+  * ~~Debe llevar a la pantalla de CuatroCanilleras con un objeto vacio~~
+* ~~Que funcione el boton Cargar Diseño~~
+  * ~~Debe llevar a lo mismo que el boton cargar de la pantalla de CuatroCanilleras~~
 * ✔ Boton Cambiar Modelo ya anda
 
 ### Nueva Canillera / Pantalla CuatroCanilleras

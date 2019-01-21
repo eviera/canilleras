@@ -43,9 +43,9 @@ class ScanQRLauncherActivity : BaseActivity() {
 
                     println("QR LLego: " + qrScanResult)
 
-                    //FIXME si todo esta bien, navega al menu
-                    val menuActivity = Intent(this, MenuActivity::class.java)
-                    startActivity(menuActivity)
+                    //FIXME si todo esta bien, navega a cuatro canilleras
+                    val cuatroCanillerasActivity = Intent(this, CuatroCanillerasActivity::class.java)
+                    startActivity(cuatroCanillerasActivity)
 
                 } else {
                     initView()

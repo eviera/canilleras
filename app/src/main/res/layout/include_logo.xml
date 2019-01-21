@@ -19,7 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo_blanco"
-        tools:showIn="@layout/activity_menu"
+        tools:showIn="@layout/activity_cuatro_canilleras"
         />
 
     <TextView

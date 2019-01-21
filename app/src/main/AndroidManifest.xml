@@ -23,11 +23,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MenuActivity" android:screenOrientation="portrait" />
         <activity android:name=".ScanQRActivity" android:screenOrientation="portrait" />
         <activity android:name=".ScanQRLauncherActivity" android:screenOrientation="portrait" />
         <activity android:name=".CuatroCanillerasActivity" android:screenOrientation="portrait"/>
         <activity android:name=".EditCanilleraActivity" android:screenOrientation="portrait" />
+
+        <activity android:name=".BORRAR_MenuActivity" android:screenOrientation="portrait" />
         <activity android:name=".BORRARPdf" android:screenOrientation="portrait" />
     </application>
 

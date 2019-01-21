@@ -13,10 +13,10 @@ class MainActivity : BaseActivity() {
 
         btnIniciar.setOnClickListener {
 
-            //Si ya tengo un tipo de canillera elegida, me voy al menu, sino, al scanner de QR
+            //Si ya tengo un tipo de canillera elegida, me voy a cuatro canilleras, sino, al scanner de QR
             if (session.project.tipoCanillera != null) {
-                val menuActivity = Intent(this, MenuActivity::class.java)
-                startActivity(menuActivity)
+                val cuatroCanillerasActivity = Intent(this, CuatroCanillerasActivity::class.java)
+                startActivity(cuatroCanillerasActivity)
 
             } else {
                 val scanQRLauncherActivity = Intent(this, ScanQRLauncherActivity::class.java)
